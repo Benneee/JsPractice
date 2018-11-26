@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>8-Ball Switch</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        h1, div {
+            text-align: center;
+            margin: auto;
+            display: flex;
+        }
+        </style>
+</head>
+<h1>8-Ball Switch</h1>
+
+<body id="ul">
+	<div id="output">
+		
+	</div>
+<script type="text/javascript">
+   
+    var html = "something went wrong!";
+    var que = prompt("Ask a question");
+    var randomNumber = Math.floor(Math.random()*6);
+    switch (randomNumber) {
+        case 0:
+            answer = "Oh well";
+            break;
+        case 1:
+            answer = "You are probably right";
+            break;
+        case 2:
+            answer = "I really do not know";
+            break;
+        case 3:
+            answer = "Ask again";
+            break;
+        case 4:
+            answer = "You need to explain better";
+            break;
+        case 5:
+            answer = "Some clues please";
+            break;
+        default:
+            answer = "Your question is unanswerable, ask another!"
+    }
+    console.log(answer);
+
+    output.innerHTML = `You asked me this: ${que} <br> and here's my response: ${answer}`;
+
+
+</script>
+
+</body>
