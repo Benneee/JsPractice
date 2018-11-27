@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rock-Paper-Scissors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+        :root {
+        --bg-color: rgb(229, 236, 240);
+        --theme-color: rgb(0, 162, 249);
+        --font-family: "Segoe UI";
+        --font-size: 1.6rem;
+        --font-color: rgb(100, 50, 199);
+        }
+        
+        html {
+            font-size: 62.5%;
+            color: var(--font-color);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: var(--font-family);
+            font-size: var(--font-size);
+            line-height: 1.5;
+        }
+
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-decoration: underline;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>The Rock Paper Scissors Game</h1>
+
+    <div id="output">
+
+    </div>
+   
+    <script>
+        var player = prompt("Pick one: Rock, Paper or Scissors");
+        var ps = player.charAt(0).toUpperCase();
+        if (ps == "R"){
+            player = "Rock"
+        }else if(ps == "P"){
+            player = "Paper"
+        }else{
+            player = "Scissors"
+        }
+
+        
+        var html = "";
+        var computer = Math.random();
+
+        // Conditional Statements to get Computer Selection
+        if (computer <= 0.34){
+            computer = "Rock";
+        }
+        else if (computer <= 0.67){
+            computer = "Paper";
+        }
+        else {
+            computer = "Scissors"
+        }
+        console.log(computer);
+        
+        // Conversion of the first letter of Computer Selection
+        var cs = computer.charAt(0).toUpperCase();
+
+        // Comparison of both Selections
+        if (ps == cs){
+            html += "It's a tie!"
+        }
+        else if(ps == "R" && cs == "S"){
+            player = "Rock";
+            computer = "Scissors";
+            html = `${player} wins!`
+        }
+        else if(ps == "R" && cs == "P"){
+            player = "Rock";
+            computer = "Paper";
+            html = `${computer} wins!`
+        }
+        else if(ps == "S" && cs == "R"){
+            player = "Scissors";
+            computer = "Rock";
+            html = `${computer} wins`
+        }
+        else if(ps == "P" && cs == "R"){
+            player = "Paper";
+            computer = "Rock"
+            html = `${player} wins`
+        }
+        else if(ps == "P" && cs == "S"){
+            player = "Paper";
+            computer = "Scissors";
+            html = `${computer} wins`
+        }
+        else{
+            html = `${player} wins`
+        }
+
+
+        output.innerHTML = `Player vs Computer <br> 
+         ${player} vs ${computer} <br>
+          Result: ${html}`
+    
+    </script> 
+</body>
+</html>
