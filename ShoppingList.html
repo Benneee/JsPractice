@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Shopping List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+</head>
+<body>
+    <h1>The Shopping List</h1>
+    <div id="output">
+        
+    </div>
+
+    <script>
+        var output = document.getElementById('output')
+        var addItem;
+
+        var shoppingList = [];
+        var numTimes = prompt('How many items for purchase today?');
+
+        for (var x = 0; x < numTimes; x++){
+            addItem = prompt('What do you want to add?');
+            if (addItem == 'none'){break}
+            shoppingList.push(addItem);
+        }
+
+        for (var x = 0; x < shoppingList.length; x++){
+            output.innerHTML += ` I am buying ${shoppingList[x]} today <br> `
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Loop Practice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+</head>
+<body>
+        <h2 id="topic"></h2>
+
+        <div id="output">
+
+        </div>
+
+    <script type="text/javascript">
+        var topic = document.getElementById('topic');
+        topic.innerHTML = 'This is the Do-While Loop';
+        var output = document.getElementById("output");
+        var x = 0;
+        
+        do {
+            if( x % 2 == 0 ){
+                output.innerHTML += ` The even value of x is ${x} <br> `;
+            }
+        x++;
+        console.log(x);
+        }while (x <= 30){ }
+
+    </script>
+</body>
+</html>

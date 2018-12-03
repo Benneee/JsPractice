@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Loop Practice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+</head>
+<body>
+        <h2 id="topic"></h2>
+
+        <div id = 'output2'>
+
+        </div>
+
+    <script type="text/javascript">
+
+        
+        var topic = document.getElementById('topic');
+        topic.innerHTML = 'This is the While Loop';
+
+        var secret = 'JAVASCRIPT';
+        
+        var answer = prompt('Enter password').toUpperCase();
+
+        while (answer != secret){
+            answer = prompt('Wrong entry! Guess again');
+        }
+        output2.innerHTML = ` Congratulations, Access Granted! Your entry was ${answer} `;
+
+    </script>
+</body>
+</html>

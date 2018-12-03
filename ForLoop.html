@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>For Loop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+    <h2>For Loop Practice</h2>
+    <div id="output">
+
+    </div>
+
+    <hr>
+
+    <div id="output2">
+
+    </div>
+
+    <hr>
+
+    <div id="output3">
+
+    </div>
+
+    
+    <script>
+        var output = document.getElementById('output')
+        var qualities = ['intelligent', 'talented', 'courageous', 'open-minded', 'free-spirited'];
+
+        for (var i = 0; i < qualities.length; i++){
+            output.innerHTML += ` Benedict is ${qualities[i]} <br> `;
+        }
+
+        var userNames = ['mike', 'john', 'larry'];
+        var output2 = document.getElementById('output2');
+        for (var x = userNames.length - 1; x >= 0; x-- ) {
+            output2.innerHTML += userNames[x] + "<br>";
+        }
+
+        var obj = {a: 'Mike', b: 'John', c: 'Larry'}
+        var output3 = document.getElementById('output3');
+
+        for (var x in obj) {
+            output3.innerHTML += ` ${x} = ${obj[x]} <br>`
+        }
+    </script>
+</body>
+</html>
