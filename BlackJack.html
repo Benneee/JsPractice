@@ -8,46 +8,16 @@
     
 </head>
 <body>
+    <h1 id= "title">BlackJack</h1>
+    <h4>by Benedict</h4>
+    <br>
+
+    <p id="text-area">Welcome to BlackJack</p>
+    <button id="new-game-button">New Game!</button>
+    <button id="hit-button">Hit!</button>
+    <button id="stay-button">Stay</button>
     
 
-    <script>
-    //BlackJack
-    //by Benedict
-    /* STEPS
-    *   Create variables to hold cards
-    *
-    */
-
-    let suits = ['Hearts', 'Clubs', 'Diamonds', 'Spades'];
-    let values = [ 'Ace', 'King', 'Queen', 'Jack', 'Ten',
-                'Nine', 'Eight', 'Seven', 'Six', 'Five', 'Four',
-                'Three', 'Two' ];
-
-    function createDeck() {
-        let deck = [];
-        for (let suitIdx = 0; suitIdx < suits.length; suitIdx++) {
-             for (let valueIdx = 0; valueIdx < values.length; valueIdx++) {
-            deck.push(values[valueIdx] + ' of ' + suits[suitIdx] );
-             }
-        }
-        return deck;
-    }
-    function getNextCard(){
-        return deck.shift();
-    }
-    let deck = createDeck();
-    
-    for (let i = 0; i < deck.length; i++) {
-        console.log(deck[i]);
-    }
-    
-    let playerCards = [ deck[0], deck[2] ];
-
-    console.log("Welcome to BlackJack");
-
-    console.log("You are dealt: ");
-    console.log(`${playerCards[0]}`); 
-    console.log(`${playerCards[1]}`);
-    </script>
+    <script src = "BlackJack.js"></script>
 </body>
 </html>
