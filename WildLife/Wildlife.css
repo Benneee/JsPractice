@@ -6,8 +6,13 @@
 
 img {
     width: 450;
-    height: 500;
-    margin: 10px;
+    height: 450;
+    margin: 12px;
+    transition: all 1s;
+}
+
+img:hover {
+    transform: scale(1.1);
 }
 
 h1 {
@@ -24,9 +29,10 @@ body {
     background-attachment: fixed;
     background-image: url(http://www.hdwallpapers.in/walls/wildlife-wide.jpg);
     background-repeat: no-repeat;
+    margin: 0px;
 }
 
 header {
-    position: fixed;
     margin-top: 0px;
+    margin-bottom: 20px;
 }
