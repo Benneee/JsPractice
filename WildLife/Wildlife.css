@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+img {
+    width: 450;
+    height: 500;
+    margin: 10px;
+}
+
+h1 {
+    color:  rgb(128, 54, 21);
+    border-bottom: 2px solid rgba(212, 139, 106, 0.4);
+    border-right: 2px solid rgba(212, 139, 106, 0.4);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2em;
+    width: 400px;
+    text-align: center;
+}
+
+body {
+    background-attachment: fixed;
+    background-image: url(http://www.hdwallpapers.in/walls/wildlife-wide.jpg);
+    background-repeat: no-repeat;
+}
+
+header {
+    position: fixed;
+    margin-top: 0px;
+}
