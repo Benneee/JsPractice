@@ -1,0 +1,52 @@
+
+h3 {
+    color:  rgb(128, 54, 21);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p {
+    color:  mistyrose;
+}
+
+.img {
+    width: 800px;
+    max-height: 700px;
+}
+
+@media (max-width: 1000px) {
+    .img {
+        max-width: 400px;
+        max-height: 450px;
+        margin-top: 100px;
+    }
+}
+
+button {
+    transition: ease-in-out;
+    background: lightblue;
+}
+
+button:hover {
+    transform: scale(1.2);
+    background: yellowgreen;
+}
+
+h1 {
+    font-family: cursive;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.h2 {
+    padding: 10px;
+    margin-top: 40px;
+}
+
+body {
+    background: linear-gradient(#f12711, #f5af19);
+}

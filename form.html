@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+<body>
+   <header id="top">
+       <h1>
+           MentorDevs Stage0 Task!
+       </h1>
+       
+       <img 
+       src="https://mentordevs.github.io/learning-tasks/assets/adam-solomon-472458-unsplash-500px.jpeg" 
+       alt="Hello">
+
+       <!-- <p>So here is the first task for the MentorDevs Group, a group hoping to
+           churn out the best JavaScript developers from this part of the world in
+           the nearest future
+       </p> -->
+
+    </header>
+    
+    <main>
+        <div>
+       <p>I built a form with html5 to get to know you better</p>
+       
+       <p> It's a simple form, here is my recommended way of filling it in 3 steps</p>
+       
+       <ol>
+           <li>Read these steps really fast</li>
+           <li>Realize that you can ignore them</li>
+           <li>Continue to fill the form however you would like</li>
+       </ol>
+    </div>
+
+       <div id="theForm">
+       <fieldset>
+           <legend>Survey Form</legend>
+
+           <label for="name">What should we call you? <br/>
+                <input type="text" 
+                placeholder="enter full name"
+                name="name">
+           </label>
+
+           <br/><br/>
+
+           <label for="email">Can we have your mail? <br/>
+               <input type="text"
+               placeholder="enter email"
+               name="email">
+           </label>
+
+           <br/><br/>
+
+           <label for="age">How old are you? <br/>
+               <input type="text"
+               placeholder="enter age">
+           </label>
+           <br/>
+           <p> What is your gender? <br/>
+           <label>
+               <input type="radio" name="gender" checked="checked" value="male">
+               Male
+           </label>
+
+           <label>
+            <input type="radio" name="gender" value="female">
+            Female
+        </label>
+
+        <label>
+            <input type="radio" name="gender" value="other">
+            Other
+        </label>
+    </p>
+
+
+    <p>
+        Are you a programmer? <br/>
+        <label>
+            <input type="checkbox" name="jobtype" checked="checked" value="yes">
+            Yes
+        </label>
+
+        <label>
+            <input type="checkbox" name="jobtype" value="no">
+            No
+        </label>
+    </p>
+
+    <p>
+        What is your current mood? <br/>
+        <select name="mood" id="moods">
+            <option value="happy">
+                Happy
+            </option>
+
+            <option value="sad">
+                Sad
+            </option>
+
+            <option value="indifferent">
+                Indifferent
+            </option>
+        </select>
+    </p>
+    
+    <button type="submit" value="submit">
+        SUBMIT FORM
+    </button>
+       </fieldset>
+    </div>
+
+    <div id="randomFacts">
+        <h2>Random facts</h2>
+        <ul>
+            <li>95% of people text things they could never say in person</li>
+            <li>Honey bees can recognize human faces</li>
+            <li>While trying to find a cure of aids the Mayo clinic made glow in dark cats</li>
+        </ul>
+    </div>
+    </main>
+
+    <footer>
+        <a href="#top">Back to top</a>
+
+        <p>Thank you for checking out for my form. 
+            If you want to see more exciting stuffs I have done, 
+            <a href="https://github.com/Benneee"> kindly check
+                out my Github Repositories</a>
+        </p>
+
+        <p>PS: The link below does not go anywhere</p>
+        <a href="#">Dead link</a>(x_x)
+    </footer>
+</body>
+</html>

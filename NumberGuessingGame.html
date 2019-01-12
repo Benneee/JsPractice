@@ -10,12 +10,24 @@
             text-align: center;
             text-decoration: underline;
         }
-
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         div {
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 10vh;
+        }
+
+        body {
+            background-color: aquamarine;
+            display: table;
+            position: relative;
+            margin: auto;
+            padding-top: 300px;            
         }
     </style>
 
@@ -28,15 +40,15 @@
 
     <div>
     <label for="guessField">
-                Enter a guess: 
+                Enter a guess: <br/> 
     </label>
     <input type="text" id = "guessField" class="guessField">
     <input type="submit" value="Submit guess" class="guessSubmit">
     </div>  
 
     <div class="resultParas">
-            <p class="guesses"></p>
-            <p class="lastResult"></p>
+            <p class="guesses"></p><br/><br/>
+            <p class="lastResult"></p><br/><br/>
             <p class="lowOrHi"></p>
     </div>
 
@@ -52,6 +64,7 @@
 
         let guessCount = 1;
         let resetButton;
+        guessField.focus();
 
         function checkGuess(){
             let userGuess = Number(guessField.value);
@@ -83,6 +96,55 @@
             guessField.value = '';
             guessField.focus();
         }
+            function setGameOver() {
+                guessField.disabled = true;
+                guessSubmit.disabled = true;
+                resetButton = document.createElement('button');
+                resetButton.textContent = 'Start new game';
+                document.body.appendChild(resetButton);
+                resetButton.addEventListener('click', resetGame);
+            }
+
+            function resetGame() {
+                guessCount = 1;
+
+                const resetParas = document.querySelectorAll('.resultParas p');
+                for (let i = 0 ; i < resetParas.length ; i++) {
+                    resetParas[i].textContent = '';
+                }
+
+                resetButton.parentNode.removeChild(resetButton);
+
+                guessField.disabled = false;
+                guessSubmit.disabled = false;
+                guessField.value = '';
+                guessField.focus();
+
+                lastResult.style.backgroundColor = 'white';
+
+                randomNumber = Math.floor(Math.random() * 100) + 1;
+            }
+
+        guessSubmit.addEventListener('click', checkGuess);
+
+        function doThis (x, y) {
+            var arr = [];
+            if (x > y) {
+                for (var i = x; i < y + 1; i++) {
+                    if (i % 2 === 0) {
+                        arr.push(i)
+                    }
+                }
+            } else if (x < y) {
+                for (var j = y; j < x + 1; j++) {
+                    if (j % 2 === 1) {
+                        arr.push(j)
+                    }
+                }
+            }
+          return arr
+        }
+
     </script>  
 </body>
 </html>
