@@ -9,12 +9,14 @@
         <li class="nav-item" (click)="onSelect('recipe')"><a class="nav-item" href="#">Recipes</a></li>
         <li class="nav-item" (click)="onSelect('shopping-list')" ><a class="nav-item" href="#">Shopping List</a></li>
       </ul>
-      <ul class="nav navbar-nav ml-auto">
+      <ul class="nav navbar-nav ml-auto" >
         <li class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">
+          <a href="#" class="nav-link dropdown-toggle"
+          role="button" data-toggle="dropdown"
+          appDropdown #r="appDropdown">
             Manage <span class="caret"></span>
           </a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" [ngClass]="{'show':r.isOpen}">
             <li><a href="#">Save Data</a></li>
             <li><a href="#">Fetch Data</a></li>
           </ul>
